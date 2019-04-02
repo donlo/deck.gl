@@ -41,9 +41,10 @@ const App = ({data, viewport}) => {
     stroked: true,
     filled: true,
     extruded: true,
+    elevationScale: 1000,
     getS2Token: d => d.token,
     getFillColor: d => [d.value * 255, (1 - d.value) * 255, (1 - d.value) * 128, 128],
-    getElevation: d => Math.random() * 1000,
+    getElevation: d => d.value,
     onHover: ({object, x, y}) => {
       const tooltip = `${object.zipcode}\nPopulation: ${object.population}`;
       /* Update tooltip

@@ -291,12 +291,12 @@ export const ColumnLayerDemo = createLayerDemoClass({
   props: {
     diskResolution: 12,
     radius: 250,
-    angle: Math.PI / 2,
     extruded: true,
     pickable: true,
+    elevationScale: 5000,
     getPosition: d => d.centroid,
     getColor: d => [48, 128, d.value * 255, 255],
-    getElevation: d => d.value * 5000
+    getElevation: d => d.value
   }
 });
 
@@ -307,9 +307,10 @@ export const GridCellLayerDemo = createLayerDemoClass({
     pickable: true,
     extruded: true,
     cellSize: 200,
+    elevationScale: 5000,
     getPosition: d => d.centroid,
     getColor: d => [48, 128, d.value * 255, 255],
-    getElevation: d => d.value * 5000
+    getElevation: d => d.value
   }
 });
 
@@ -322,8 +323,9 @@ export const S2LayerDemo = createLayerDemoClass({
     stroked: true,
     filled: true,
     extruded: true,
+    elevationScale: 1000,
     getS2Token: d => d.token,
     getFillColor: d => [d.value * 255, (1 - d.value) * 255, (1 - d.value) * 128, 128],
-    getElevation: d => Math.random() * 1000
+    getElevation: d => d.value
   }
 });

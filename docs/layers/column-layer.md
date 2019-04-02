@@ -21,7 +21,7 @@ const App = ({data, viewport}) => {
   /**
    * Data format:
    * [
-   *   {position: [-122.4, 37.7], color: [255, 0, 0], value: 0.2},
+   *   {centroid: [-122.4, 37.7], value: 0.2},
    *   ...
    * ]
    */
@@ -30,12 +30,12 @@ const App = ({data, viewport}) => {
     data,
     diskResolution: 12,
     radius: 250,
-    angle: Math.PI / 2,
     extruded: true,
     pickable: true,
+    elevationScale: 5000,
     getPosition: d => d.centroid,
     getColor: d => [48, 128, d.value * 255, 255],
-    getElevation: d => d.value * 5000
+    getElevation: d => d.value 
   });
 
   return (<DeckGL {...viewport} layers={[layer]} />);
