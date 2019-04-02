@@ -289,9 +289,9 @@ export const ColumnLayerDemo = createLayerDemoClass({
   Layer: ColumnLayer,
   dataUrl: `${DATA_URI}/hexagons.json`,
   props: {
+    diskResolution: 12,
     radius: 250,
     angle: Math.PI / 2,
-    diskResolution: 12,
     extruded: true,
     pickable: true,
     getPosition: d => d.centroid,

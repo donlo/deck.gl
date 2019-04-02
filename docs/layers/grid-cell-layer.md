@@ -32,11 +32,12 @@ const App = ({data, viewport}) => {
   const layer = new GridCellLayer({
     id: 'grid-cell-layer',
     data,
-    cellSize: 500,
+    pickable: true,
     extruded: true,
-    getPosition: d => d.position,
-    getColor: d => d.color,
-    getElevation: d => d.elevation
+    cellSize: 200,
+    getPosition: d => d.centroid,
+    getColor: d => [48, 128, d.value * 255, 255],
+    getElevation: d => d.value * 5000
   });
 
   return (<DeckGL {...viewport} layers={[layer]} />);
