@@ -1,9 +1,7 @@
 
 export const MAPBOX_STYLES = {
-  // LIGHT: 'mapbox://styles/uberdata/cive48w2e001a2imn5mcu2vrs',
-  // DARK: 'mapbox://styles/uberdata/cive485h000192imn6c6cc8fc',
-  LIGHT: 'mapbox://styles/mapbox/light-v9',
-  DARK: 'mapbox://styles/mapbox/light-v9',
+  LIGHT: 'mapbox://styles/uberdata/cive48w2e001a2imn5mcu2vrs',
+  DARK: 'mapbox://styles/uberdata/cive485h000192imn6c6cc8fc',
   BLANK: {
     version: 8,
     sources: {},

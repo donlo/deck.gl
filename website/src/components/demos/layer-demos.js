@@ -324,6 +324,6 @@ export const S2LayerDemo = createLayerDemoClass({
     extruded: true,
     getS2Token: d => d.token,
     getFillColor: d => [d.value * 255, (1 - d.value) * 255, (1 - d.value) * 128, 128],
-    getElevation: d => Math.random() * 1000,
+    getElevation: d => Math.random() * 1000
   }
 });
